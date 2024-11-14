@@ -98,7 +98,7 @@ function draw() {
   page.stroke(0,0,255)
   page.translate(page.width/2,50)
   page.rotate(cos(frameCount/90)/5)
-  page.text("😱HOW BEES CONTROL US😱",0,0)
+  page.text("HOW BEES CONTROL US",0,0)
   page.pop()
   
   //text at the bottom of the card
