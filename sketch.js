@@ -26,7 +26,7 @@ let factTextX=320
 
 //load reasons because i dont trust ayaan to touch my code
 function preload() {
-  reasonDat = loadStrings('reasons.txt');
+  reasonDat = loadStrings('https://raw.githubusercontent.com/bestbinaryboi/beesAreHorrible/refs/heads/main/reasons.txt');
 }
 
 //setup canvases
