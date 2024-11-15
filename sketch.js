@@ -9,7 +9,7 @@ let bgColor1="#000000"
 let bgColor2="#FFDD00"
 //where the card is on the screen
 let boxY=470
-
+let randomChars=["-","_","=","|","\\","/"]
 //the Y position of the "click anywhere to start" text
 let startTextY=180
 
@@ -116,7 +116,13 @@ function draw() {
   page.stroke(1)
   page.fill(255)
   page.textSize(18)
-  page.text(((currentFact%facts.length)+1)+".\n"+facts[currentFact%(facts.length)],factTextX,boxY-20)
+  let renderFact=((currentFact%facts.length)+1)+".\n"+facts[currentFact%(facts.length)]
+  for (let i=0;i<renderFact.length;i++){
+    if(renderFact[i]="%"){
+      renderFact[i]=random(randomChars)
+    }
+  }
+  page.text(renderFact,factTextX,boxY-20)
   page.pop()
   
   //move the box if it needs to be moved
